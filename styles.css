@@ -179,7 +179,7 @@ p {
 
 .left-arrow {
     left: 10px;
-    transform: translateY(-50%) rotate(180deg);
+    transform: rotate(180deg);
 }
 
 .right-arrow {
@@ -195,6 +195,10 @@ p {
     border-radius: 5px;
     width: 750px;
     object-fit: cover;
+}
+
+.popup-image.opened ~ footer {
+    display: none;
 }
 
 @media (max-width: 768px) {
@@ -232,4 +236,21 @@ p {
         width: calc(100% - 4vw) !important;
     }
     
+    .image:hover {
+        transform: none !important;
+        box-shadow: none !important;
+        background-position: initial !important;
+    }
+
+    .arrow-btn {
+        position: absolute;
+        top: auto;
+        bottom: 10px;
+        transform: none;
+        font-size: 28px;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .left-arrow {
+        transform: rotate(180deg);
+    }
 }
