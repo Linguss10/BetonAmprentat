@@ -69,13 +69,13 @@ section {
 footer {
     position: fixed;
     bottom: 0;
-    left: 10vw;  /* același padding lateral ca body */
-    width: calc(100% - 20vw); /* 100% minus padding stânga+dreapta */
+    left: 10vw;  
+    width: calc(100% - 20vw); 
     height: auto;
     background-color: #333;
     color: #fff;
     text-align: center;
-    line-height: normal; /* pentru alinierea verticală */
+    line-height: normal; 
     box-sizing: border-box;
     z-index: 1000;
 }
@@ -197,7 +197,6 @@ p {
     object-fit: cover;
 }
 
-/* 🔽 Mobile friendly adjustments */
 @media (max-width: 768px) {
     body {
         padding-left: 2vw !important;
@@ -232,4 +231,5 @@ p {
         left: 2vw !important;
         width: calc(100% - 4vw) !important;
     }
+    
 }
