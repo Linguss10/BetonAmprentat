@@ -1,0 +1,201 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    border-left: 10vw solid transparent; 
+    border-right: 10vw solid transparent; 
+}
+
+h1{
+    font-size: 34px;
+}
+
+header, nav, section, footer {
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.65); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+header {
+    background-color: #181818;
+    color: #fff;
+    font-family: baskerville, serif;
+}
+
+nav {
+    background-color: #303030;
+    color: #fff;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1em;
+    margin: 0 1em;
+    font-weight: bold;
+    width: max-content;
+    position: relative;
+    cursor: pointer;
+}
+
+
+nav a::after{
+    content: "";
+    position: absolute;
+    bottom: 8px;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    background-color: #fff;
+    border-radius: 8px;
+    transition: 0.3s;
+    transition-timing-function: easy-in-out;
+    transform: scaleX(0)
+}
+nav a:hover::after
+{
+    transform: scaleX(1);
+}
+
+section {
+    max-width: 1500px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+
+    width: 78.3%;
+}
+
+.border-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: url('Images/betonAMP (7).jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    filter: blur(0.5px);
+    -webkit-filter: blur(0.5px);
+}
+
+
+p{
+    font-size: 22px;
+}
+
+
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1500px;
+}
+
+.image{
+    border-radius: 3rem;
+    padding: 1.25rem;
+    width: 277px;
+    height: 182px;
+    overflow: hidden;
+    cursor:pointer;
+    transition: 1s;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid #52525294;
+    transition: .2s linear;
+}
+
+.image:hover{
+    transform: scale(1.25);
+    box-shadow: 0 0 10px rgba(145, 90, 7, 0.507);
+    background-position: center;
+}
+
+.popup-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+    opacity: 0;
+    transform: scale(0); 
+    transform-origin: center center;
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+}
+
+.popup-image.opened {
+    opacity: 1;
+    transform: scale(1); 
+}
+
+.popup-image span {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+}
+
+.arrow-btn {
+    position: absolute;
+    top: 50%;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.left-arrow {
+    left: 10px;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.popup-image img.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #fafafa70;
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
+}
+
+@media (max-width:768px){
+    .popup-image img{
+        width:95%;
+
+    }
+}
+

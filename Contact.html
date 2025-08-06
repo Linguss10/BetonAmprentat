@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beton Amprentat</title>
+    <link rel="stylesheet" href="Style/Contact.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div>
+        <header>
+            <h1 align="center">Beton Amprentat</h1>
+        </header>
+
+        <nav align="center">
+            <a href="Pagina Principala.html">Pagina Principala</a>
+            <a href="Galerie.html">Galerie</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+
+        <section>
+            <h2 align="center">Contact</h2>
+            <div class="form">
+                <form method="post">
+                    <input type="text" placeholder="Name" id="name" autocomplete="off">
+                    <input type="email" placeholder="Email" id="email" autocomplete="off">
+                    <input type="subject" placeholder="Subject" id="subject" autocomplete="off">
+                    <textarea id="message" placeholder="Message" cols=30 rows="10"></textarea>
+                    <button id="btn">Send</button>
+                </form>
+            </div>
+        </section>
+
+        <footer align="center">
+            Telefon: -
+            <br>
+            Email: -
+    </footer>
+        <div class="border-image"></div>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+     var btn = document.getElementById('btn');
+     btn.addEventListener('click', function(e){
+        e.preventDefault();
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var subject = document.getElementById('subject').value;
+        var message = document.getElementById('message').value;
+        var body = 'name: '+name + '<br/> email: ' + email + '<br/> subject: ' +subject +  '<br/> message: ' + message;
+    Email.send({
+    SecureToken : "b54456a4-8586-45ee-998a-43a31e2b36dc",
+    To : 'oatu.mihai10@gmail.com',
+    From : "themihai0@gmail.com",
+    Subject : "This is the subject",
+    Body : body
+}).then(
+  message => alert(message)
+);
+     })
+    </script>
+</body>
+
+</html>
