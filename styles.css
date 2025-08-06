@@ -87,13 +87,17 @@ footer {
     right: 0;
     bottom: 0;
     z-index: -1;
+
     background-image: url('Images/betonAMP (7).jpg');
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-position: center center;
+
     filter: blur(0.5px);
     -webkit-filter: blur(0.5px);
+
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 p {
