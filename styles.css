@@ -222,6 +222,75 @@ p {
     display: none;
 }
 
+.servicii-lista {
+    padding: 1rem 0;
+}
+
+
+.lista-personalizata {
+    list-style: none;
+    padding-left: 0;
+    font-size: 20px;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: auto;
+  }
+  
+  .lista-personalizata li {
+    position: relative;
+    padding-left: 2em;
+    margin-bottom: 0.5em;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 0.75em 1em 0.75em 2.5em;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    transition: background 0.3s ease;
+  }
+  
+  .lista-personalizata li::before {
+    content: "✔️";
+    position: absolute;
+    left: 0.2em;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+  }
+
+.tipuri-beton {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+.linie-beton {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.linie-beton img {
+    width: 400px;
+    max-width: 100%;
+    border-radius: 10px;
+    border: 4px solid #777;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.linie-beton div {
+    flex: 1;
+    font-size: 18px;
+}
+
+.linie-beton.invers {
+    flex-direction: row-reverse;
+}
+
+
+
 @media (max-width: 768px) {
     body {
         padding-left: 2vw !important;
@@ -290,4 +359,11 @@ p {
       section.fade-in > div {
         width: 100% !important; 
       }
+     .linie-beton {
+        flex-direction: column;
+        text-align: center;
+    }
+    .linie-beton.invers {
+        flex-direction: column;
+    }
 }
