@@ -17,7 +17,7 @@
         <nav align="center">
             <a href="index.html">Pagina Principala</a>
             <a href="Galerie.html">Galerie</a>
-            <a href="Contact.html">Contact</a>
+            <a href="Contact.html">Servicii</a>
         </nav>
 
         <section style="padding: 2rem; border-radius: 12px;">
@@ -34,9 +34,20 @@
               <li> Prețuri corecte, în funcție de <strong>complexitatea lucrării</strong></li>
             </ul>
             <p style="margin-top: 1.5rem; font-size: 1.1rem; text-align: center;"><strong>Calitate garantată. Rezistență de lungă durată. Design personalizat.</strong></p>
-            <br>  <br>   <br> <br>    <br>  <br>  <br>  <br> <br> 
+            <br>  <br>   <br> <br>    <br>  <br> <br> <br> <br> <br>
         </section>
-
+        <section class="fade-in" style="display: flex; align-items: center; gap: 2rem; padding: 2rem;">
+            <img src="./Images/betonAMP (10).jpg" alt="Beton amprentat" style="width: 45%; border-radius: 12px;">
+            <div style="width: 50%;">
+              <h2 style="font-size: 2rem; margin-bottom: 1rem;">De ce să alegi beton amprentat?</h2>
+              <p style="font-size: 1.1rem; line-height: 1.8; text-align: justify;">
+                Betonul amprentat oferă o soluție durabilă și estetică pentru suprafețele exterioare, fiind rezistent la uzură și condiții meteo.  
+                În plus, permite o varietate mare de modele și culori, adaptându-se perfect stilului casei și grădinii tale.
+              </p>
+            </div>
+          </section>
+          <br> <br> <br> <br> <br> <br> <br>
+          
         <footer align="center">
             Telefon: -
             <br>
@@ -45,5 +56,24 @@
         <div class="border-image"></div>
     </div>
 </body>
+
+<script>
+window.addEventListener('scroll', () => {
+  const elements = document.querySelectorAll('.fade-in');
+  const triggerBottom = window.innerHeight * 0.9;
+
+  elements.forEach(el => {
+    const boxTop = el.getBoundingClientRect().top;
+
+    if(boxTop < triggerBottom) {
+      el.classList.add('visible');
+    } else {
+      el.classList.remove('visible'); 
+    }
+  });
+});
+
+
+</script>
 
 </html>

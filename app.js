@@ -13,6 +13,7 @@ galleryImages.forEach((image, index) => {
         popupImage.style.display = 'block'; 
         setTimeout(() => {
             popupImage.classList.add('opened'); 
+            document.body.style.overflow = 'hidden'; 
         }, 50); 
     };
 });
@@ -21,6 +22,7 @@ document.querySelector('.popup-image span').onclick = () => {
     popupImage.classList.remove('opened'); 
     setTimeout(() => {
         popupImage.style.display = 'none'; 
+        document.body.style.overflow = '';  
     }, 300); 
     clickedImageIndex = -1;
 };
@@ -40,3 +42,4 @@ document.querySelector('.arrow-btn.left-arrow').onclick = () => {
         clickedImageIndex = prevIndex;
     }
 };
+
