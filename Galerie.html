@@ -67,9 +67,25 @@
             Email: -
             
     </footer>
+    <footer class="footer-copyright">
+        © 2025 Beton Amprentat. Toate drepturile rezervate.
+      </footer>
         <div class="border-image"></div>
     </div>
     <script src="app.js"></script>
-</script>
+    <script>
+        window.addEventListener('scroll', () => {
+          const scrollTop = window.scrollY || document.documentElement.scrollTop;
+          const windowHeight = window.innerHeight;
+          const docHeight = document.documentElement.scrollHeight;
+      
+          
+          if (scrollTop + windowHeight >= docHeight - 100) {
+            document.body.classList.add('at-bottom');
+          } else {
+            document.body.classList.remove('at-bottom');
+          }
+        });
+      </script>
 </body>
 </html>
