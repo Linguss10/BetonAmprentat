@@ -28,18 +28,20 @@ document.querySelector('.popup-image span').onclick = () => {
 };
 
 document.querySelector('.arrow-btn.right-arrow').onclick = () => {
-    const nextIndex = clickedImageIndex + 1;
-    if (nextIndex < galleryImages.length) {
-        popupImg.src = galleryImages[nextIndex].getAttribute('src');
-        clickedImageIndex = nextIndex;
+    let nextIndex = clickedImageIndex + 1;
+    if (nextIndex >= galleryImages.length) {
+        nextIndex = 0;
     }
+    popupImg.src = galleryImages[nextIndex].getAttribute('src');
+    clickedImageIndex = nextIndex;
 };
 
 document.querySelector('.arrow-btn.left-arrow').onclick = () => {
-    const prevIndex = clickedImageIndex - 1;
-    if (prevIndex >= 0) {
-        popupImg.src = galleryImages[prevIndex].getAttribute('src');
-        clickedImageIndex = prevIndex;
+    let prevIndex = clickedImageIndex - 1;
+    if (prevIndex < 0) {
+        prevIndex = galleryImages.length - 1;
     }
+    popupImg.src = galleryImages[prevIndex].getAttribute('src');
+    clickedImageIndex = prevIndex;
 };
 

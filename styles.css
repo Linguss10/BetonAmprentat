@@ -311,6 +311,9 @@ footer.footer-copyright {
     opacity: 1;              
     visibility: visible;
   }
+  .mobile-links {
+    display: none;
+  }
   
 
 
@@ -367,6 +370,13 @@ footer.footer-copyright {
     .left-arrow {
         transform: rotate(180deg);
     }
+    .image img {
+        transition: transform 0.15s ease;
+    }
+
+    .image img.clicked {
+        transform: scale(1.05);
+    }
     section.fade-in {
         flex-direction: column;
         padding: 1rem;
@@ -389,4 +399,14 @@ footer.footer-copyright {
     .linie-beton.invers {
         flex-direction: column;
     }
+    .desktop-text {
+        display: none;
+      }
+      .mobile-links {
+        display: inline;
+      }
+      .mobile-links a {
+        color: white;
+      }
+    
 }
